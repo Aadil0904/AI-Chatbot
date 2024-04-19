@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField } from "@mui/material";
+import TextField from "@mui/material/TextField";
 type Props = {
   name: string;
   type: string;
@@ -8,6 +8,7 @@ type Props = {
 const CustomizedInput = (props: Props) => {
   return (
     <TextField
+      margin="normal"
       InputLabelProps={{ style: { color: "white" } }}
       name={props.name}
       label={props.label}

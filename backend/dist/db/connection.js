@@ -5,17 +5,17 @@ async function connectToDatabase() {
     }
     catch (error) {
         console.log(error);
-        throw new Error("Cannot Conect to MongoDB");
+        throw new Error("Could not Connect To MongoDB");
     }
 }
-async function disconnectToDatabase() {
+async function disconnectFromDatabase() {
     try {
         await disconnect();
     }
     catch (error) {
         console.log(error);
-        throw new Error("Cannot Conect to MongoDB");
+        throw new Error("Could not Disconnect From MongoDB");
     }
 }
-export { connectToDatabase, disconnectToDatabase };
+export { connectToDatabase, disconnectFromDatabase };
 //# sourceMappingURL=connection.js.map
