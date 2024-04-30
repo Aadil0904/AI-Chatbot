@@ -103,11 +103,11 @@ const Chat = () => {
             {auth?.user?.name.split(" ")[1][0]}
           </Avatar>
           <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
-            You are talking to a ChatBOT
+            You are talking to the EmoBot
           </Typography>
           <Typography sx={{ mx: "auto", fontFamily: "work sans", my: 4, p: 3 }}>
-            You can ask some questions related to Knowledge, Business, Advices,
-            Education, etc. But avoid sharing personal information
+            Speak to your own EmoBot !! EmoBot helps you with all your emotional
+            troubles, and provides you with the best advice for any situation.
           </Typography>
           <Button
             onClick={handleDeleteChats}
@@ -145,7 +145,7 @@ const Chat = () => {
             fontWeight: "600",
           }}
         >
-          Model - GPT 3.5 Turbo
+          !! WELCOME To EmoBot !!
         </Typography>
         <Box
           sx={{
