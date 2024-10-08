@@ -1,66 +1,46 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import TypingAnim from "../components/typer/TypingAnim";
 import Footer from "../components/footer/Footer";
+import Chatapp from "../components/chatApp";
+
 
 const Home = () => {
-  const theme = useTheme();
-  const isBelowMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box width={"100%"} height={"100%"}>
-      <Box
-        sx={{
-          display: "flex",
-          width: "100%",
-          flexDirection: "column",
-          alignItems: "center",
-          mx: "auto",
-          mt: 3,
-        }}
-      >
-        <Box>
-          <TypingAnim />
-        </Box>
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: { md: "row", xs: "column", sm: "column" },
-            gap: 5,
-            my: 10,
-          }}
-        >
-          <img
-            src="robot.png"
-            alt="robot"
-            style={{ width: "200px", margin: "auto" }}
-          />
-          <img
-            className="image-inverted rotate"
-            src="openai.png"
-            alt="openai"
-            style={{ width: "200px", margin: "auto" }}
-          />
-        </Box>
-        <Box sx={{ display: "flex", mx: "auto" }}>
-          <img
-            src="new-chat.png"
-            alt="chatbot"
-            style={{
-              display: "flex",
-              margin: "auto",
-              width: isBelowMd ? "80%" : "60%",
-              borderRadius: 20,
-              boxShadow: "-5px -5px 105px #64f3d5",
-              marginTop: 20,
-              marginBottom: 20,
-              padding: 10,
-            }}
-          />
-        </Box>
-      </Box>
-      <Footer />
-    </Box>
+    <>
+    
+      <div className="w-full h-full mt-32">
+        <div className="flex flex-col items-center mx-auto mt-3">
+          <div>
+            <TypingAnim />
+          </div>
+
+          {/* Images Section */}
+          <div className="w-full flex flex-col md:flex-row gap-5 my-10 items-center">
+            <img
+              src="robot.png"
+              alt="robot"
+              className="w-80 mx-auto"
+            />
+            <img
+          
+              src="openai.png"
+              alt="openai"
+              className="w-64 mx-auto transform"
+            />
+          </div>
+
+          {/* Chatbot Image Section */}
+          <div className="flex mx-auto">
+            <img
+              src="new-chat.png"
+              alt="chatbot"
+              className="flex mx-auto w-4/5 md:w-3/5 rounded-lg mt-5 mb-5 p-2"
+            />
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
