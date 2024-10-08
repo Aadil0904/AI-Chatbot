@@ -9,7 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLogout = () => {
-    auth.logout();
+    auth?.logout();
     setIsOpen(false); // Close the mobile drawer on logout
   };
 
